@@ -410,9 +410,9 @@ Here is the data for ${currentStock.name} (${currentStock.symbol}) in the ${curr
 - Liquidity Score: ${currentStock.liquidity.toFixed(1)}/100
 - Overall DhanVest Composite Score: ${currentStock.composite.toFixed(1)}/100
 
-Write a 3-sentence explanation in plain, conversational Bangla for a retail investor.
-Highlight exactly ONE strength based on the highest score and ONE risk based on the lowest score.
-CRITICAL RULE: Never predict the future price. Just explain the present scores.`;
+Write a 3-to-4 sentence explanation in plain, conversational Bangla for a retail investor.
+Highlight the main strength and risk based on the scores. 
+CRITICAL RULE: You MUST provide a clear final verdict/suggestion at the end (e.g. whether they should buy it now, avoid it, or wait for a specific condition). Use phrases like "Etai ekhon kena uchit" or "Ekhon kena thik hobe na".`;
 
       try {
           const res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${key}`, {
